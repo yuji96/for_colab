@@ -1,5 +1,6 @@
 # Find π
 Python チュートリアル
 
-## ライプニッツ級数(Leibniz formula)
-<img src="https://latex.codecogs.com/svg.latex?\frac{\pi}{4} = \frac{1}{1} - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \frac{1}{9} - \dots" />  
+## 1. ライプニッツ級数(Leibniz formula)
+![](https://wikimedia.org/api/rest_v1/media/math/render/svg/b7cd66a2cfdbb199966e2b3c13ca7e0f5f87a67d)  
+ライプニッツ級数を用いて円周率の近似値を求めよ。
