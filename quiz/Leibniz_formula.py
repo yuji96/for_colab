@@ -1,4 +1,3 @@
-
 def Leibniz_series(n):
     """
     n項目のライプニッツ級数を求める。
@@ -16,16 +15,15 @@ def Leibniz_series(n):
 
     Examples
     --------
-    >>> print(Leibniz_series(0))
+    >>> Leibniz_series(0)
     1.0
-    >>> print(Leibniz_series(2))
+    >>> Leibniz_series(2)
     0.2
-    >>> print(Leibniz_series(10))
+    >>> Leibniz_series(10)
     0.047619047619047616
-    >>> print(Leibniz_series(-1))
-    None
+    >>> Leibniz_series(-1)
     """
-    # TODO
+    # TODO: 関数の実装
     pass
 
 
@@ -46,12 +44,14 @@ def find_pi(func, n, coef):
     -------
     float
         円周率の近似値
+
+    Examples
+    --------
+    >>> pi = find_pi(Leibniz_series, n=1000, coef=4)
+    >>> round(pi, 2)
+    3.14
+    >>> find_pi(lambda x: x, n=10, coef=1)
+    55
     """
-    # TODO
+    # TODO: 関数の実装
     pass
-
-
-if __name__ == "__main__":
-    n = 1000
-    print("円周率の近似値:")
-    print(find_pi(Leibniz_series, n, coef=4))
