@@ -16,16 +16,15 @@ def Leibniz_series(n):
 
     Examples
     --------
-    >>> print(Leibniz_series(0))
+    >>> Leibniz_series(0)
     1.0
-    >>> print(Leibniz_series(2))
+    >>> Leibniz_series(2)
     0.2
-    >>> print(Leibniz_series(10))
+    >>> Leibniz_series(10)
     0.047619047619047616
-    >>> print(Leibniz_series(-1))
-    None
+    >>> Leibniz_series(-1)
     """
-    # TODO
+    # TODO: 関数の実装
     pass
 
 
@@ -47,7 +46,7 @@ def find_pi(func, n, coef):
     float
         円周率の近似値
     """
-    # TODO
+    # TODO: 関数の実装
     pass
 
 
