@@ -1,3 +1,6 @@
+# 説明
+# https://github.com/shinonome-inc/python-basic/issues/3
+
 def Leibniz_series(n):
     """
     n項目のライプニッツ級数を求める。

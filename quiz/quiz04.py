@@ -1,3 +1,6 @@
+# 説明
+# https://github.com/shinonome-inc/python-basic/issues/4
+
 # TODO: circle_digits.txt を読み込む
 
 
