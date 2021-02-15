@@ -1,1 +1,101 @@
-hello, world!
+<html lang="js" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Demo</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <h1>Grid Layout by Muuri.js</h1>
+
+    <section class="grid-wrapper">
+      <div class="filter-controls">
+        <div class="control">
+          Search
+          <input
+            class="search-field form-control"
+            type="text"
+            name="search"
+            placeholder="Enter the fruit name"
+          />
+        </div>
+        <div class="control">
+          Filter
+          <select class="filter-field form-control">
+            <option value="">None</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+          </select>
+        </div>
+        <div class="control">
+          Sort
+          <select class="sort-field form-control">
+            <option value="order">None</option>
+            <option value="title">Order by fruit name</option>
+            <option value="color">Order by color name</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="item" data-category="blue" data-title="peach">
+          <div class="item-content">
+            <!-- Safe zone, enter your custom markup -->
+            <div class="custom-content">Item 1<br />(peach)</div>
+            <!-- Safe zone ends -->
+          </div>
+        </div>
+        <div
+          class="item"
+          data-category="red"
+          data-category="blue"
+          data-title="orange"
+        >
+          <div class="item-content">
+            <div class="custom-content">Item 2<br />(orange)</div>
+          </div>
+        </div>
+        <div
+          class="item"
+          data-category="green"
+          data-category="blue"
+          data-title="banana applpe"
+        >
+          <div class="item-content">
+            <div class="custom-content">Item 3<br />(banana apple)</div>
+          </div>
+        </div>
+        <div
+          class="item"
+          data-category="red"
+          data-category="blue"
+          data-title="grape orange"
+        >
+          <div class="item-content">
+            <div class="custom-content">Item 4<br />(grape orange)</div>
+          </div>
+        </div>
+        <div
+          class="item"
+          data-category="red"
+          data-category="blue"
+          data-title="strawberry"
+        >
+          <div class="item-content">
+            <div class="custom-content">Item 5<br />(strawberry)</div>
+          </div>
+        </div>
+      </div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.1/web-animations.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/muuri/0.5.4/muuri.min.js"></script>
+      <script src="./muuri.js"></script>
+    </section>
+  </body>
+</html>
