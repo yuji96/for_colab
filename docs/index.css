@@ -1,4 +1,3 @@
-@import url(//fonts.googleapis.com/css?family=Montserrat:9000);
 *:before,
 *:after {
   box-sizing: border-box;
@@ -8,17 +7,17 @@
 
 body {
   font-family: Arial, "Hiragino Kaku Gothic Pro W3", Meiryo, sans-serif;
-  background-color: #fff;
-  color: #999;
+  background-color: #d2dae2;
+  color: rgb(0, 0, 0);
   text-align: center;
 }
 body a,
 body a:visited {
-  color: #999;
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 body a:hover {
-  color: #777;
+  color: rgb(0, 0, 0);
 }
 
 h1 {
@@ -34,8 +33,8 @@ h1 {
 }
 .filter-controls .control {
   display: inline-block;
-  width: 240px;
-  margin: 0 10px;
+  width: 270px;
+  margin: 0 6px;
 }
 .filter-controls .control * {
   box-sizing: border-box;
@@ -60,7 +59,7 @@ h1 {
 
 .grid {
   position: relative;
-  width: 878px;
+  width: 870px;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -69,7 +68,7 @@ h1 {
   position: absolute;
   width: 270px;
   height: 300px;
-  margin: 5px;
+  margin: 10px;
   z-index: 1;
   transition: transform 0.6s ease;
   word-break: break-all;
@@ -87,9 +86,7 @@ h1 {
   vertical-align: middle;
   text-align: center;
   background: #fff;
-  color: #666;
-  border: 2px solid;
-  border-radius: 3px;
+  color: rgb(0, 0, 0);
 }
 
 @media (max-width: 877px) {

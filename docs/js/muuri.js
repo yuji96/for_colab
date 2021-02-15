@@ -1,5 +1,39 @@
+let data = [
+  ["松尾研GCI", "中級", "#0fbcf9"],
+  ["松尾研DL", "上級", "#0fbcf9"],
+  ["PRML", "上級", "#ffd32a"],
+  ["はじぱた", "中級", "#0be881"],
+  ["大学の授業を普通に受ける", "初級", "#808e9b"],
+];
+
+function createItems(gridElem) {
+  for (let i = 0; i < data.length; i++) {
+    let title = data[i][0];
+    let category = data[i][1];
+    let color = data[i][2];
+
+    let content = document.createElement("div");
+    content.className = "custom-content";
+    content.style.background = color;
+    content.appendChild(document.createTextNode(title));
+    content.appendChild(document.createElement("br"));
+    content.appendChild(document.createTextNode(category));
+
+    let contentWrapper = document.createElement("div");
+    contentWrapper.className = "item-content";
+    contentWrapper.appendChild(content);
+
+    let item = document.createElement("div");
+    item.className = "item";
+    item.dataset.title = title;
+    item.dataset.category = category;
+    item.appendChild(contentWrapper);
+    gridElem.appendChild(item);
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
-  var grid = null,
+  let grid = null,
     wrapper = document.querySelector(".grid-wrapper"),
     searchField = wrapper.querySelector(".search-field"),
     filterField = wrapper.querySelector(".filter-field"),
@@ -13,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     dragOrder = [];
 
   // Init the grid layout
+  createItems(gridElem);
   grid = new Muuri(gridElem);
 
   // Set inital search query, active filter, active sort value and active layout.
@@ -22,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Search field event binding
   searchField.addEventListener("keyup", function () {
-    var newSearch = searchField.value.toLowerCase();
+    let newSearch = searchField.value.toLowerCase();
     if (searchFieldValue !== newSearch) {
       searchFieldValue = newSearch;
       filter();
@@ -39,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function filter() {
     filterFieldValue = filterField.value;
     grid.filter(function (item) {
-      var element = item.getElement(),
+      let element = item.getElement(),
         isSearchMatch = !searchFieldValue
           ? true
           : (element.getAttribute(searchAttr) || "")
@@ -55,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Sorting
   function sort() {
     // Do nothing if sort value did not change.
-    var currentSort = sortField.value;
+    let currentSort = sortField.value;
     if (sortFieldValue === currentSort) {
       return;
     }
@@ -79,15 +114,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Compare data-title
   function compareItemTitle(a, b) {
-    var aVal = a.getElement().getAttribute(searchAttr) || "";
-    var bVal = b.getElement().getAttribute(searchAttr) || "";
+    let aVal = a.getElement().getAttribute(searchAttr) || "";
+    let bVal = b.getElement().getAttribute(searchAttr) || "";
     return aVal < bVal ? -1 : aVal > bVal ? 1 : 0;
   }
 
   // Compare data-color
   function compareItemColor(a, b) {
-    var aVal = a.getElement().getAttribute(filterAttr) || "";
-    var bVal = b.getElement().getAttribute(filterAttr) || "";
+    let aVal = a.getElement().getAttribute(filterAttr) || "";
+    let bVal = b.getElement().getAttribute(filterAttr) || "";
     return aVal < bVal ? -1 : aVal > bVal ? 1 : compareItemTitle(a, b);
   }
 });
