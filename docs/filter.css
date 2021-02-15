@@ -11,9 +11,15 @@ body {
   color: rgb(0, 0, 0);
   text-align: center;
 }
+
+footer {
+  width: 100%;
+  font-size: smaller;
+  color: rgb(104, 104, 104);
+}
 body a,
 body a:visited {
-  color: rgb(0, 0, 0);
+  color: rgb(21, 107, 255);
   text-decoration: none;
 }
 body a:hover {
@@ -62,6 +68,7 @@ h1 {
   width: 870px;
   max-width: 100%;
   margin: 0 auto;
+  min-height: 100vh;
 }
 
 .item {
