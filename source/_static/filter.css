@@ -1,11 +1,11 @@
-*:before,
-*:after {
+body[role="main"] *:before,
+body[role="main"] *:after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-body {
+body[role="main"] {
   font-family: Arial, "Hiragino Kaku Gothic Pro W3", Meiryo, sans-serif;
   background-color: #ffffff;
   color: rgb(0, 0, 0);
@@ -17,16 +17,16 @@ footer {
   font-size: smaller;
   color: rgb(104, 104, 104);
 }
-body a,
-body a:visited {
+body[role="main"] a,
+body[role="main"] a:visited {
   color: rgb(21, 107, 255);
   text-decoration: none;
 }
-body a:hover {
+body[role="main"] a:hover {
   color: rgb(0, 0, 0);
 }
 
-h1 {
+body[role="main"] h1 {
   font-size: 36px;
   font-family: "Montserrat", sans-serif;
   color: #53e2e4;
