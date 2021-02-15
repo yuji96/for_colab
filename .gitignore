@@ -211,3 +211,6 @@ Colab/answers/
 
 # setting for mac
 **/.DS_store
+
+# setting for sphinx
+**/doctrees
