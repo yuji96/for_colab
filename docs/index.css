@@ -7,7 +7,7 @@
 
 body {
   font-family: Arial, "Hiragino Kaku Gothic Pro W3", Meiryo, sans-serif;
-  background-color: #d2dae2;
+  background-color: #ffffff;
   color: rgb(0, 0, 0);
   text-align: center;
 }
@@ -83,10 +83,21 @@ h1 {
 
 .custom-content {
   display: table-cell;
-  vertical-align: middle;
+  padding: 30px;
   text-align: center;
   background: #fff;
   color: rgb(0, 0, 0);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.custom-content div {
+  font-size: larger;
+  margin-bottom: 20px;
+}
+
+.custom-content li {
+  text-align: left;
 }
 
 @media (max-width: 877px) {

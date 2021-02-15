@@ -12,12 +12,18 @@ function createItems(gridElem) {
     let category = data[i][1];
     let color = data[i][2];
 
+    let titleElem = document.createElement("div");
+    titleElem.appendChild(document.createTextNode(title));
+    let categoryElem = document.createElement("li");
+    categoryElem.appendChild(document.createTextNode(category));
+    let categories = document.createElement("ul");
+    categories.appendChild(document.createTextNode(categoryElem));
+
     let content = document.createElement("div");
     content.className = "custom-content";
     content.style.background = color;
-    content.appendChild(document.createTextNode(title));
-    content.appendChild(document.createElement("br"));
-    content.appendChild(document.createTextNode(category));
+    content.appendChild(titleElem);
+    content.appendChild(categoryElem);
 
     let contentWrapper = document.createElement("div");
     contentWrapper.className = "item-content";
