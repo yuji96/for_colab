@@ -213,4 +213,4 @@ Colab/answers/
 **/.DS_store
 
 # setting for sphinx
-**/doctrees
+**/.doctrees

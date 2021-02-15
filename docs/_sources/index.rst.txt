@@ -11,6 +11,7 @@ Welcome to bookmarks's documentation!
    :caption: Contents:
 
    hello
+   filter
 
 
 Indices and tables

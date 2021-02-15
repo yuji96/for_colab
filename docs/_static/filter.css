@@ -119,3 +119,12 @@ h1 {
     height: calc(50vw - 10px);
   }
 }
+
+div.document {
+  width: 100%;
+  margin: 100px;
+}
+
+div.body {
+  max-width: 100%;
+}
