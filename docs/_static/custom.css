@@ -1,1 +1,9 @@
 /* This file intentionally left blank. */
+
+div.document {
+  width: 90vw;
+  padding: 0 5vw;
+}
+div.body {
+  max-width: 100%;
+}
