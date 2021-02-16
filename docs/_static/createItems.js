@@ -14,28 +14,19 @@ for (let i = 0; i < data.length; i++) {
   let color = data[i][1];
   let tags = data[i][3].split(" ");
 
-  let titleElem = document.createElement("div");
-  titleElem.appendChild(document.createTextNode(title));
-  let tagsElem = document.createElement("ul");
+  let tagsElem = $("<ul>");
   for (let i = 0; i < tags.length; i++) {
-    let tag = document.createElement("li");
-    tag.appendChild(document.createTextNode(tags[i]));
-    tagsElem.appendChild(tag);
+    $("<li>", { text: tags[i] }).appendTo(tagsElem);
   }
-  let content = document.createElement("div");
-  content.className = "custom-content";
-  content.style.background = color;
-  content.appendChild(titleElem);
-  content.appendChild(tagsElem);
 
-  let contentWrapper = document.createElement("div");
-  contentWrapper.className = "item-content";
-  contentWrapper.appendChild(content);
-
-  let item = document.createElement("div");
-  item.className = "item";
-  item.dataset.title = title;
-  item.dataset.category = tags;
-  item.appendChild(contentWrapper);
-  gridElem.appendChild(item);
+  $("<div>", { class: "item" })
+    .attr({ "data-title": title, "data-category": tags })
+    .appendTo(gridElem)
+    .append(
+      $("<div>", { class: "item-content" }).append(
+        $("<div>", { class: "custom-content" })
+          .css("background", color)
+          .append($("<div>", { text: title }), tagsElem)
+      )
+    );
 }

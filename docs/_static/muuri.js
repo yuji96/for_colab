@@ -47,7 +47,8 @@ document.addEventListener("DOMContentLoaded", function () {
               .indexOf(searchFieldValue) > -1,
         isFilterMatch = !filterFieldValue
           ? true
-          : (element.getAttribute(filterAttr) || "") === filterFieldValue;
+          : (element.getAttribute(filterAttr) || "").indexOf(filterFieldValue) >
+            -1;
       return isSearchMatch && isFilterMatch;
     });
   }
