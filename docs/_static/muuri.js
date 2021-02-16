@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     sortField = wrapper.querySelector(".sort-field"),
     gridElem = wrapper.querySelector(".grid"),
     searchAttr = "data-title",
-    filterAttr = "data-category",
+    filterAttr = "data-tag",
     searchFieldValue,
     filterFieldValue,
     sortFieldValue,
