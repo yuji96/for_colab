@@ -1,43 +1,3 @@
-let data = [
-  ["松尾研GCI", "中級", "#0fbcf9"],
-  ["松尾研DL", "上級", "#0fbcf9"],
-  ["PRML", "上級", "#ffd32a"],
-  ["はじぱた", "中級", "#0be881"],
-  ["大学の授業を普通に受ける", "初級", "#808e9b"],
-];
-
-function createItems(gridElem) {
-  for (let i = 0; i < data.length; i++) {
-    let title = data[i][0];
-    let category = data[i][1];
-    let color = data[i][2];
-
-    let titleElem = document.createElement("div");
-    titleElem.appendChild(document.createTextNode(title));
-    let categoryElem = document.createElement("li");
-    categoryElem.appendChild(document.createTextNode(category));
-    let categories = document.createElement("ul");
-    categories.appendChild(document.createTextNode(categoryElem));
-
-    let content = document.createElement("div");
-    content.className = "custom-content";
-    content.style.background = color;
-    content.appendChild(titleElem);
-    content.appendChild(categoryElem);
-
-    let contentWrapper = document.createElement("div");
-    contentWrapper.className = "item-content";
-    contentWrapper.appendChild(content);
-
-    let item = document.createElement("div");
-    item.className = "item";
-    item.dataset.title = title;
-    item.dataset.category = category;
-    item.appendChild(contentWrapper);
-    gridElem.appendChild(item);
-  }
-}
-
 document.addEventListener("DOMContentLoaded", function () {
   let grid = null,
     wrapper = document.querySelector(".grid-wrapper"),
@@ -53,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
     dragOrder = [];
 
   // Init the grid layout
-  createItems(gridElem);
   grid = new Muuri(gridElem);
 
   // Set inital search query, active filter, active sort value and active layout.
