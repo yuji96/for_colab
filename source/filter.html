@@ -33,7 +33,7 @@
             <option value="理論">理論</option>
           </select>
         </div>
-        <div class="control">
+        <div class="control" style="display: none">
           Sort
           <select class="sort-field form-control">
             <option value="order">None</option>
@@ -43,7 +43,19 @@
         </div>
       </div>
 
-      <div class="grid"></div>
+      <div class="grid">
+        <div class="item template" data-title="" data-category="">
+          <div class="item-content">
+            <div class="custom-content">
+              <div class="item-title"></div>
+              <ul class="item-tags"></ul>
+              <button>
+                <a href="#">LINK TO</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <script src="./_static/createItems.js" defer></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.1/web-animations.min.js"></script>

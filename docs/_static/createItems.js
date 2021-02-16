@@ -7,26 +7,23 @@ let data = [
   ["marzen ebooks", "", "", "理論 実装 書籍 無料", ""],
 ];
 
-gridElem = document.querySelector(".grid");
+let gridElem = $(".grid");
 
 for (let i = 0; i < data.length; i++) {
   let title = data[i][0];
   let color = data[i][1];
   let tags = data[i][3].split(" ");
 
-  let tagsElem = $("<ul>");
+  let item = $(".item.template")
+    .clone()
+    .removeClass("template")
+    .appendTo(gridElem);
+  item.attr({ "data-title": title, "data-category": tags });
+  item.find(".custom-content").css("background", color);
+  item.find(".item-title").text(title);
+
+  let tagsElem = item.find(".item-tags");
   for (let i = 0; i < tags.length; i++) {
     $("<li>", { text: tags[i] }).appendTo(tagsElem);
   }
-
-  $("<div>", { class: "item" })
-    .attr({ "data-title": title, "data-category": tags })
-    .appendTo(gridElem)
-    .append(
-      $("<div>", { class: "item-content" }).append(
-        $("<div>", { class: "custom-content" })
-          .css("background", color)
-          .append($("<div>", { text: title }), tagsElem)
-      )
-    );
 }
