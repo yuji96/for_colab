@@ -6,24 +6,49 @@
   </head>
 
   <body>
-    <h1>Grid Layout by Muuri.js</h1>
-
     <section class="grid-wrapper">
       <div class="filter-controls">
         <div class="control">
-          Search
           <input
             class="search-field form-control"
             type="text"
             name="search"
-            placeholder="Enter the fruit name"
+            placeholder="タイトルを検索"
           />
         </div>
-        <div class="control">
-          Filter
-          <select class="filter-field form-control">
-            <option value="">全て</option>
-          </select>
+        <div class="filter-controls">
+          <div class="control">
+            形式
+            <select class="filter-field form-control">
+              <option value="">全て</option>
+              <option value="書籍">書籍</option>
+              <option value="サイト">サイト</option>
+              <option value="Docs">Docs</option>
+              <option value="メディア">メディア</option>
+              <option value="動画">動画</option>
+            </select>
+          </div>
+          <div class="control">
+            内容
+            <select class="filter-field form-control">
+              <option value="">全て</option>
+              <option value="理論">理論</option>
+              <option value="Python">Python</option>
+              <option value="numpy">numpy</option>
+              <option value="pandas">pandas</option>
+              <option value="matplotlib">matplotlib</option>
+              <option value="scikit-learn">scikit-learn</option>
+              <option value="深層学習">深層学習</option>
+            </select>
+          </div>
+          <div class="control">
+            その他
+            <select class="filter-field form-control">
+              <option value="">全て</option>
+              <option value="無料">無料</option>
+              <option value="深層学習">深層学習</option>
+            </select>
+          </div>
         </div>
         <div class="control" style="display: none">
           Sort
@@ -39,8 +64,12 @@
         <div class="item template" data-title="" data-tag="">
           <div class="item-content">
             <div class="custom-content">
-              <div class="item-title"></div>
-              <ul class="item-tags"></ul>
+              <div class="item-title">タイトル</div>
+              <ul class="item-tags">
+                <li class="template">タグ</li>
+                <li class="template">タグ</li>
+                <li class="template">タグ</li>
+              </ul>
               <button>
                 <a href="#"><span> LINK TO</span></a>
               </button>
