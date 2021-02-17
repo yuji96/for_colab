@@ -49,7 +49,7 @@ for (let i = 0; i < data.length; i++) {
 }
 $(".item.template").remove();
 
-allTags.sort();
-for (let i = 0; i < allTags.length; i++) {
-  $("<option>", {value: allTags[i]}).text(allTags[i]).appendTo(filterControl)
-}
+// allTags.sort();
+// for (let i = 0; i < allTags.length; i++) {
+//   $("<option>", {value: allTags[i]}).text(allTags[i]).appendTo(filterControl)
+// }

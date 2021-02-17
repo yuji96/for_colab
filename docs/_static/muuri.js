@@ -2,25 +2,20 @@ document.addEventListener("DOMContentLoaded", function () {
   let grid = null,
     wrapper = document.querySelector(".grid-wrapper"),
     searchField = wrapper.querySelector(".search-field"),
-    filterField = wrapper.querySelector(".filter-field"),
+    filterFields = wrapper.querySelectorAll(".filter-field"),
     sortField = wrapper.querySelector(".sort-field"),
     gridElem = wrapper.querySelector(".grid"),
     searchAttr = "data-title",
     filterAttr = "data-tag",
     searchFieldValue,
-    filterFieldValue,
     sortFieldValue,
     dragOrder = [];
 
   // Init the grid layout
   grid = new Muuri(gridElem);
 
-  // Set inital search query, active filter, active sort value and active layout.
+  // Set search
   searchFieldValue = searchField.value.toLowerCase();
-  filterFieldValue = filterField.value;
-  sortFieldValue = sortField.value;
-
-  // Search field event binding
   searchField.addEventListener("keyup", function () {
     let newSearch = searchField.value.toLowerCase();
     if (searchFieldValue !== newSearch) {
@@ -29,28 +24,34 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Filter field event binding
-  filterField.addEventListener("change", filter);
+  // Set filter
+  for (let i = 0; i < filterFields.length; i++) {
+    filterFields[i].addEventListener("change", filter);
+  }
 
-  // Sort field event binding
+  // Set sort
+  sortFieldValue = sortField.value;
   sortField.addEventListener("change", sort);
 
   // Filtering
   function filter() {
-    filterFieldValue = filterField.value;
     grid.filter(function (item) {
       let element = item.getElement(),
         isSearchMatch = !searchFieldValue
           ? true
           : (element.getAttribute(searchAttr) || "")
               .toLowerCase()
-              .indexOf(searchFieldValue) > -1,
-        isFilterMatch = !filterFieldValue
-          ? true
-          : (element.getAttribute(filterAttr) || "").indexOf(filterFieldValue) >
-            -1;
-      return isSearchMatch && isFilterMatch;
+              .indexOf(searchFieldValue) > -1;
+      return isSearchMatch && isFilterMatch((element.getAttribute(filterAttr) || ""), filterFields)
     });
+  }
+  function isFilterMatch(tags, filterFields) {
+    for (let i = 0; i < filterFields.length; i++) {
+      if (filterFields[i] && tags.indexOf(filterFields[i].value) === -1) {
+        return false;
+      }
+    }
+    return true;
   }
 
   // Sorting
