@@ -212,5 +212,11 @@ Colab/answers/
 # setting for mac
 **/.DS_store
 
-# setting for sphinx
+# setting for python
+sphinx
 **/.doctrees
+
+# setting for editor
+.vscode
+
+
