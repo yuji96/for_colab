@@ -136,4 +136,10 @@ const data = [
     link: "https://www.kaggle.com/",
     icon: "./_static/img/kaggle.jpeg",
   },
+  {
+    title: "nkmk",
+    tags: "その他 実装",
+    link: "https://note.nkmk.me/",
+    icon: "./_static/img/nkmk.jpg",
+  },
 ];
