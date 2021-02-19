@@ -31,7 +31,8 @@
 
 
 ## メディア
-
+  - [Ledge AI](https://ledge.ai/)  
+    &emsp;記事にハズレがない。
   - [@IT](https://www.atmarkit.co.jp/ait/series/search/17/)
     &emsp;中途半端なところから会員限定になる記事も多い。
     シンタックスハイライトが他サイトに比べると格好良くなかったり、教科書や公式ドキュメントレベルほど充実した内容ではないため、
@@ -40,3 +41,5 @@
   - [わかばちゃんと学ぶGit](https://www.r-staffing.co.jp/engineer/entry/20190621_1)  
     私はgitはこれで習得したと言っても過言では無い（ちょっと盛ってる）。
     [機械学習編](https://www.r-staffing.co.jp/engineer/entry/20210122_1)も連載予定らしい。
+  - [AINOW](https://ainow.ai/)
+  - [AVILEN](https://ai-trend.jp/)
