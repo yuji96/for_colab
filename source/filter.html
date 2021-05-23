@@ -1,0 +1,81 @@
+<html lang="js">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Demo</title>
+    <link rel="stylesheet" href="./_static/filter.css" />
+  </head>
+
+  <body>
+    <section class="grid-wrapper">
+      <div class="filter-controls">
+        <div class="control" style="display: none">
+          <input
+            class="search-field form-control"
+            type="text"
+            name="search"
+            placeholder="タイトルを検索"
+            value=""
+          />
+        </div>
+        <div class="filter-controls">
+          <div class="control">
+            <select class="filter-field form-control">
+              <option value="">サイトの形式を選ぶ</option>
+              <option value="Docs">Docs</option>
+              <option value="notebook">notebook</option>
+              <option value="書籍">書籍</option>
+              <option value="動画">動画</option>
+              <option value="その他">その他</option>
+            </select>
+          </div>
+          <div class="control">
+            <select class="filter-field form-control">
+              <option value="">内容を選ぶ</option>
+              <option value="理論">理論</option>
+              <option value="実装">実装</option>
+            </select>
+          </div>
+          <!-- <div class="control">
+            その他
+            <select class="filter-field form-control">
+              <option value="">全て</option>
+              <option value="無料">無料</option>
+              <option value="深層学習">深層学習</option>
+            </select>
+          </div> -->
+        </div>
+        <div class="control" style="display: none">
+          Sort
+          <select class="sort-field form-control">
+            <option value="order">None</option>
+            <option value="title">Order by fruit name</option>
+            <option value="color">Order by color name</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="item template" data-title="" data-tag="">
+          <div class="item-content">
+            <div class="custom-content">
+              <div class="item-top">
+                <img class="item-icon" />
+                <div class="item-title">タイトル</div>
+              </div>
+              <ul class="item-tags"></ul>
+              <button>
+                <a href="#"><span> LINK TO</span></a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="./_static/data.js"></script>
+      <script src="./_static/createItems.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.1/web-animations.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/muuri/0.5.4/muuri.min.js"></script>
+      <script src="./_static/muuri.js"></script>
+    </section>
+  </body>
+</html>
