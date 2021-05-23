@@ -1,3 +1,6 @@
+sphinx
+.vscode
+
 ### https://raw.github.com/github/gitignore/7ab549fcae8269fdd4004065470176f829d88200/Python.gitignore
 
 # Byte-compiled / optimized / DLL files
@@ -208,3 +211,34 @@ fabric.properties
 # 問題の答え
 ans/
 Colab/answers/
+### https://raw.github.com/github/gitignore/7ab549fcae8269fdd4004065470176f829d88200/Global/macOS.gitignore
+
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+
